@@ -36,43 +36,61 @@ export default function HomePage() {
   useEffect(() => {
     if (!db) return;
 
-    let q = query(collection(db, "issues"));
+    try {
+      let q = query(collection(db, "issues"));
 
-    // Apply filters
-    if (filterCategory !== "all") {
-      q = query(q, where("category", "==", filterCategory));
-    }
-    if (filterStatus !== "all") {
-      q = query(q, where("status", "==", filterStatus));
-    }
-
-    // Apply sorting
-    if (sortBy === "newest") {
-      q = query(q, orderBy("createdAt", "desc"));
-    } else if (sortBy === "trending") {
-      q = query(q, orderBy("upvotes", "desc"));
-    } else if (sortBy === "oldest") {
-      q = query(q, orderBy("createdAt", "asc"));
-    }
-
-    const unsub = onSnapshot(q, (snapshot) => {
-      const items = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-
-      // Client-side location filter
-      let filtered = items;
-      if (filterLocation) {
-        filtered = items.filter((item) =>
-          item.location?.toLowerCase().includes(filterLocation.toLowerCase())
-        );
+      // Apply filters
+      if (filterCategory !== "all") {
+        q = query(q, where("category", "==", filterCategory));
+      }
+      if (filterStatus !== "all") {
+        q = query(q, where("status", "==", filterStatus));
       }
 
-      setIssues(filtered);
-    });
+      // Apply sorting
+      if (sortBy === "newest") {
+        q = query(q, orderBy("createdAt", "desc"));
+      } else if (sortBy === "trending") {
+        q = query(q, orderBy("upvotes", "desc"));
+      } else if (sortBy === "oldest") {
+        q = query(q, orderBy("createdAt", "asc"));
+      }
 
-    return () => unsub();
+      const unsub = onSnapshot(
+        q,
+        (snapshot) => {
+          const items = snapshot.docs.map((doc) => ({
+            id: doc.id,
+            ...doc.data(),
+          }));
+
+          // Client-side location filter
+          let filtered = items;
+          if (filterLocation) {
+            filtered = items.filter((item) =>
+              item.location?.toLowerCase().includes(filterLocation.toLowerCase())
+            );
+          }
+
+          setIssues(filtered);
+        },
+        (error) => {
+          console.error("Firestore query error:", error);
+          // If index error, show helpful message
+          if (error.code === "failed-precondition") {
+            console.warn(
+              "Firestore index required. Check the error message for the index link."
+            );
+          }
+          setIssues([]);
+        }
+      );
+
+      return () => unsub();
+    } catch (error) {
+      console.error("Error setting up query:", error);
+      setIssues([]);
+    }
   }, [filterCategory, filterStatus, filterLocation, sortBy]);
 
   async function handleUpvote(issueId, currentUpvotes, upvotedBy) {

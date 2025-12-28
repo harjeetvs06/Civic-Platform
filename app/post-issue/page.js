@@ -268,14 +268,16 @@ export default function PostIssuePage() {
                 placeholder="Enter address or click on map"
                 required
               />
-              <div
-                ref={mapRef}
-                className="w-full h-64 border rounded-lg"
-                style={{ minHeight: "256px" }}
-              />
+          <img
+           src="/mapholder.png"
+            alt="Map preview"
+            className="w-full h-64 object-cover rounded-lg border"
+            
+            />
+
               {!mapLoaded && (
                 <p className="text-sm text-gray-500 mt-2">
-                  Loading map... (Make sure Google Maps API key is configured)
+                  Loading map... (Static map)
                 </p>
               )}
             </div>
