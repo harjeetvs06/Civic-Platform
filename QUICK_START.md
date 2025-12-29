@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-## 🚀 Get Running in 5 Minutes
+##  Get Running in 5 Minutes
 
 ### Step 1: Install Dependencies
 ```bash
@@ -8,19 +8,11 @@ cd civic-platform
 npm install
 ```
 
-### Step 2: Set Up Environment Variables
 
-Create `.env.local` file:
-```env
-NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your_key_here
-NEXT_PUBLIC_GEMINI_API_KEY=your_key_here
-```
 
-**Quick API Keys:**
-- Google Maps: https://console.cloud.google.com/ → Enable "Maps JavaScript API" → Create API Key
-- Gemini: https://makersuite.google.com/app/apikey → Create API Key
 
-### Step 3: Firebase Setup
+
+### Step 2: Firebase Setup
 
 1. Go to https://console.firebase.google.com/
 2. Use existing project or create new
@@ -31,20 +23,20 @@ NEXT_PUBLIC_GEMINI_API_KEY=your_key_here
 
 **Note**: The Firebase config in `app/firebase.js` is already set. Update it if using a different project.
 
-### Step 4: Run
+### Step 3: Run
 ```bash
 npm run dev
 ```
 
 Visit: http://localhost:3000
 
-## 🧪 Test the Platform
+##  Test the Platform
 
 1. **Sign Up** as Citizen → Report an issue
 2. **Sign Up** as Municipality → Respond to issues
 3. **Sign Up** as Think Tank → View analytics
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 civic-platform/
@@ -61,7 +53,7 @@ civic-platform/
 └── HACKATHON_PROPOSAL.md          # Proposal document
 ```
 
-## ✅ Checklist
+##  Checklist
 
 - [ ] Dependencies installed
 - [ ] `.env.local` created with API keys
@@ -71,12 +63,8 @@ civic-platform/
 - [ ] Can report an issue
 - [ ] Google Maps loads (check browser console if not)
 
-## 🐛 Common Issues
+## Common Issues
 
-**Maps not loading?**
-- Check `.env.local` has `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY`
-- Verify API is enabled in Google Cloud Console
-- Check browser console for errors
 
 **Firebase errors?**
 - Verify Firebase config in `app/firebase.js`
@@ -88,7 +76,7 @@ civic-platform/
 - Clear `.next` folder: `rm -rf .next`
 - Check Node.js version (18+)
 
-## 📚 Next Steps
+## Next Steps
 
 - Read `README.md` for full documentation
 - Check `ARCHITECTURE.md` for system design
@@ -97,5 +85,5 @@ civic-platform/
 
 ---
 
-**Ready to build! 🎉**
+**Ready to build! **
 

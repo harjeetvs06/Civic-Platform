@@ -1,12 +1,12 @@
 # CivicGrievance Platform - Hackathon Proposal
 
-## 🎯 Project Overview
+##  Project Overview
 
 **CivicGrievance** is a public, data-driven grievance and accountability platform that transforms citizen complaints into transparent, accountable action and policy intelligence.
 
 **Tagline**: *Twitter + Google Maps + RTI-style accountability + AI reporting*
 
-## 🚨 Problem Statement
+##  Problem Statement
 
 ### Current Challenges
 
@@ -28,29 +28,29 @@
    - Policy decisions lack data-driven insights
    - No accountability metrics
 
-## 💡 Our Solution
+##  Our Solution
 
 A comprehensive platform with three user roles:
 
 ### 1. Citizens
-- 📝 Report issues with location, images, category
-- 👍 Upvote to prioritize issues
-- 📊 Track status and responses in real-time
-- 🔍 Filter by location, category, status
+-  Report issues with location, images, category
+-  Upvote to prioritize issues
+-  Track status and responses in real-time
+-  Filter by location, category, status
 
 ### 2. Municipal Authorities
-- 🏛️ Dedicated dashboard for tagged issues
-- ✅ Structured response system
-- 📸 Upload proof (before/after photos, documents)
-- 📈 Track response metrics
+-  Dedicated dashboard for tagged issues
+-  Structured response system
+-  Upload proof (before/after photos, documents)
+-  Track response metrics
 
 ### 3. Think Tanks / Policy Agencies
-- 📊 Analytics dashboard with insights
-- 🤖 AI-powered report generation (Google Gemini)
-- 📥 Export data as CSV
-- 🔍 Analyze trends and recurring issues
+- Analytics dashboard with insights
+- AI-powered report generation (Google Gemini)(havent implemented it)
+- Export data as CSV
+- Analyze trends and recurring issues
 
-## 🛠️ Technical Implementation
+##  Technical Implementation
 
 ### Tech Stack
 - **Frontend**: Next.js 16, React 19, Tailwind CSS
@@ -81,21 +81,16 @@ A comprehensive platform with three user roles:
      - Not Resolved (with reason)
    - Immutable response logging
 
-4. **AI-Powered Analytics**
-   - Issue clustering using embeddings
-   - Auto-generated reports
-   - Trend analysis
-   - Recurring issue identification
 
-## 🎨 Innovation Highlights
+## Innovation Highlights
 
-✅ **Public Accountability**: Unlike private systems, all data is public  
-✅ **Proof-Based Closure**: Issues resolved only with evidence  
-✅ **AI Intelligence**: Converts data into policy insights  
-✅ **Citizen Participation**: Upvote system gives voice  
-✅ **Long-term Value**: Historical data becomes policy resource  
+ **Public Accountability**: Unlike private systems, all data is public  
+ **Proof-Based Closure**: Issues resolved only with evidence  
+ **AI Intelligence**: Converts data into policy insights  
+ **Citizen Participation**: Upvote system gives voice  
+ **Long-term Value**: Historical data becomes policy resource  
 
-## 📊 Impact
+##  Impact
 
 ### Immediate
 - Easy issue reporting and tracking
@@ -108,14 +103,14 @@ A comprehensive platform with three user roles:
 - Improved citizen-government trust
 - Evidence-based resource allocation
 
-## 🚀 Demo Flow
+##  Demo Flow
 
 1. **Citizen reports pothole** → Uploads photo, pins location
 2. **Issue appears in feed** → Gets upvotes from neighbors
 3. **Municipality responds** → Uploads before/after photos, marks resolved
 4. **Think tank analyzes** → Generates report on road infrastructure trends
 
-## 📈 Success Metrics
+## Success Metrics
 
 - Number of issues reported
 - Resolution rate
@@ -124,7 +119,7 @@ A comprehensive platform with three user roles:
 - Recurring issues identified
 - Policy recommendations generated
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 - Anonymous reporting with verification
 - Sentiment analysis on responses
@@ -133,7 +128,7 @@ A comprehensive platform with three user roles:
 - Multilingual support (Gemini-powered)
 - Mobile app (React Native)
 
-## 🏆 Why This Wins
+##  Why This Wins
 
 1. **Real-World Problem**: Addresses actual civic pain points
 2. **Complete Solution**: End-to-end platform, not just a feature
@@ -142,11 +137,11 @@ A comprehensive platform with three user roles:
 5. **User-Centric**: Three distinct user experiences
 6. **Production-Ready**: Can be deployed immediately
 
-## 📝 One-Line Pitch
+## One-Line Pitch
 
 > A public, AI-powered civic issue platform that turns citizen complaints into accountable action and policy intelligence.
 
 ---
 
-**Built for transparent and accountable governance** 🏛️
+**Built for transparent and accountable governance** 
 

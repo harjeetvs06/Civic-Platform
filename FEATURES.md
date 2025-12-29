@@ -1,6 +1,6 @@
 # Feature List
 
-## 🏠 Home Feed (Public)
+## Home Feed (Public)
 
 - **Twitter-style chronological feed** of all civic issues
 - **Real-time updates** using Firestore listeners
@@ -19,7 +19,7 @@
   - Media/images
   - Official responses (if any)
 
-## 📝 Issue Posting
+##  Issue Posting
 
 - **Comprehensive form** with:
   - Title and description
@@ -35,7 +35,7 @@
 - **Firebase Storage** integration for media
 - **Real-time validation**
 
-## 🏛️ Municipality Dashboard
+##  Municipality Dashboard
 
 - **Issue management interface**:
   - View all issues (filterable by status)
@@ -48,6 +48,7 @@
     - Date completed
     - Proof upload (before/after photos, documents)
   - **In Progress**:
+    - maps API and Gemini
     - What is being done
     - Expected timeline
     - Progress updates
@@ -59,7 +60,7 @@
 - **Immutable logging** - all responses are permanent
 - **Status updates** automatically reflected
 
-## 📊 Analytics Dashboard (Think Tank)
+##  Analytics Dashboard (Think Tank)
 
 - **Key Metrics**:
   - Total issues
@@ -77,18 +78,9 @@
 - **Data Export**:
   - CSV export with all issue data
   - Includes: ID, title, category, location, status, upvotes, dates
-- **AI Report Generation**:
-  - Uses Google Gemini API
-  - Analyzes all data
-  - Generates comprehensive report:
-    - Executive summary
-    - Key findings
-    - Top problem areas
-    - Policy recommendations
-    - Trends and patterns
-  - Downloads as text file
 
-## 👤 User Management
+
+##  User Management
 
 - **Role-based access control**:
   - **Citizen** (default):
@@ -113,7 +105,7 @@
   - Password reset
   - Email verification
 
-## 🎨 UI/UX Features
+##  UI/UX Features
 
 - **Responsive design** (mobile, tablet, desktop)
 - **Modern Tailwind CSS** styling
@@ -131,7 +123,7 @@
 - **Image galleries** for issue evidence
 - **Map integration** for location selection
 
-## 🔒 Security Features
+##  Security Features
 
 - **Firebase Authentication** for secure login
 - **Role-based access** enforced at route level
@@ -139,25 +131,20 @@
 - **Firestore security rules** (to be configured in production)
 - **Storage security** (to be configured in production)
 
-## 📱 Technical Features
+##  Technical Features
 
 - **Real-time updates** using Firestore listeners
 - **Optimistic UI updates** for upvotes
 - **Image optimization** via Firebase Storage
-- **Geocoding** via Google Maps API
-- **AI integration** via Google Gemini API
-- **Server-side rendering** for SEO (Next.js)
-- **Client-side routing** for fast navigation
 
-## 🚀 Performance
+##  Performance
 
-- **Lazy loading** for Google Maps
 - **Image lazy loading** in galleries
 - **Efficient Firestore queries** with indexes
 - **Optimized re-renders** with React hooks
 - **CDN-backed storage** for media files
 
-## 🔮 Future Enhancements (Roadmap)
+##  Future Enhancements (Roadmap)
 
 - [ ] Push notifications for issue updates
 - [ ] Email notifications
@@ -177,5 +164,5 @@
 
 ---
 
-**All features are production-ready and fully functional!** ✅
+**All features are production-ready and fully functional!** 
 

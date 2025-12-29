@@ -1,15 +1,14 @@
 # System Architecture
 
-## High-Level Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                        Frontend Layer                        │
+│                        Frontend Layer                       │
 │                    (Next.js + React)                        │
 ├─────────────────────────────────────────────────────────────┤
 │  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐     │
 │  │   Citizen    │  │ Municipality │  │  Think Tank  │     │
-│  │   Interface  │  │   Dashboard  │  │   Analytics   │     │
+│  │   Interface  │  │   Dashboard  │  │   Analytics  │     │
 │  └──────────────┘  └──────────────┘  └──────────────┘     │
 └─────────────────────────────────────────────────────────────┘
                             │
@@ -51,20 +50,17 @@
 
 ### Issue Reporting Flow
 ```
-Citizen → Post Issue Page → Google Maps (Location) → Firebase Storage (Images)
-    → Firestore (Issue Document) → Home Feed (Real-time Update)
+Citizen → Post Issue Page → Firebase Storage (Images) → Firestore (Issue Document) → Home Feed (Real-time Update)
 ```
 
 ### Municipality Response Flow
 ```
-Municipality Dashboard → View Issues → Submit Response → Upload Proof
-    → Firestore Update → Home Feed (Show Response)
+Municipality Dashboard → View Issues → Submit Response → Upload Proof → Firestore Update → Home Feed (Show Response)
 ```
 
 ### Analytics Flow
 ```
-Think Tank Dashboard → Firestore Query → Calculate Metrics
-    → Google Gemini API (AI Analysis) → Generate Report → Download
+Think Tank Dashboard → Firestore Query → Calculate Metrics → Generate Report → Download
 ```
 
 ## Database Schema
@@ -147,8 +143,7 @@ app/
 1. **Firebase Auth**: User authentication and role management
 2. **Firestore**: Real-time database for issues and users
 3. **Firebase Storage**: Image and document storage
-4. **Google Maps API**: Location selection and geocoding
-5. **Google Gemini API**: AI-powered report generation
+
 
 ## Scalability Considerations
 
@@ -165,4 +160,5 @@ app/
 - SMS alerts for critical issues
 - Multi-language support
 - Mobile app (React Native)
+- Use gemini map and gemini for report
 

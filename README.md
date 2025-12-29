@@ -2,36 +2,36 @@
 
 A public, AI-powered civic issue platform that turns citizen complaints into accountable action and policy intelligence.
 
-## 🎯 Overview
+##  Overview
 
 CivicGrievance is a CPGRAMS-inspired public issue reporting platform where:
 - **Citizens** report local infrastructure and civic issues
 - **Municipalities** respond transparently with proof
 - **Think Tanks** extract policy intelligence from aggregated data
 
-Think of it as: **Twitter + Google Maps + RTI-style accountability + AI reporting**
+Think of it as: **Twitter + RTI-style accountability + AI reporting**
 
-## ✨ Features
+##  Features
 
 ### For Citizens
-- 📝 Report issues with location, images, and category
-- 👍 Upvote issues to prioritize them
-- 📊 Track issue status and responses
-- 🔍 Filter and search issues by location, category, status
+-  Report issues with location, images, and category
+-  Upvote issues to prioritize them
+-  Track issue status and responses
+-  Filter and search issues by location, category, status
 
 ### For Municipal Authorities
-- 🏛️ Dedicated dashboard to view tagged issues
-- ✅ Respond with structured resolutions
-- 📸 Upload proof (before/after photos, documents)
-- 📈 Track response metrics
+-  Dedicated dashboard to view tagged issues
+-  Respond with structured resolutions
+-  Upload proof (before/after photos, documents)
+-  Track response metrics
 
 ### For Think Tanks / Policy Agencies
-- 📊 Analytics dashboard with insights
-- 🤖 AI-powered report generation (Google Gemini)
-- 📥 Export data as CSV
-- 🔍 Analyze trends and recurring issues
+- Analytics dashboard with insights
+- AI-powered report generation (Google Gemini)
+- Export data as CSV
+- Analyze trends and recurring issues
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend**: Next.js 16, React 19, Tailwind CSS
 - **Backend**: Firebase (Auth, Firestore, Storage)
@@ -39,7 +39,7 @@ Think of it as: **Twitter + Google Maps + RTI-style accountability + AI reportin
 - **AI**: Google Gemini API
 - **Deployment**: Vercel (recommended)
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
 ### Prerequisites
 
@@ -82,7 +82,7 @@ Think of it as: **Twitter + Google Maps + RTI-style accountability + AI reportin
 6. **Open your browser:**
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 civic-platform/
@@ -108,7 +108,7 @@ civic-platform/
 └── README.md
 ```
 
-## 🔐 User Roles
+##  User Roles
 
 1. **Citizen** (default)
    - Can report issues
@@ -127,7 +127,7 @@ civic-platform/
    - Can generate AI reports
    - Can export data
 
-## 📊 Firestore Collections
+##  Firestore Collections
 
 ### `issues`
 ```javascript
@@ -168,19 +168,8 @@ civic-platform/
 }
 ```
 
-## 🗺️ Google Maps Setup
 
-1. Go to [Google Cloud Console](https://console.cloud.google.com/)
-2. Create a new project or select existing
-3. Enable "Maps JavaScript API"
-4. Create credentials (API Key)
-5. Add the API key to `.env.local`
 
-## 🤖 Google Gemini Setup (Optional)
-
-1. Go to [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Create an API key
-3. Add it to `.env.local` as `NEXT_PUBLIC_GEMINI_API_KEY`
 
 ## 🚢 Deployment
 
@@ -198,25 +187,25 @@ npm run build
 firebase deploy
 ```
 
-## 🎨 Customization
+##  Customization
 
 - Update colors in `globals.css`
 - Modify issue categories in `app/post-issue/page.js`
 - Adjust analytics metrics in `app/analytics/page.js`
 
-## 📝 License
+##  License
 
 This project is open source and available for hackathon use.
 
-## 🤝 Contributing
+##  Contributing
 
 This is a hackathon project. Feel free to fork and enhance!
 
-## 📧 Support
+##  Support
 
 For issues or questions, please open an issue on GitHub.
 
 ---
 
-**Built with ❤️ for transparent and accountable governance**
+**Built with love for transparent and accountable governance**
 
