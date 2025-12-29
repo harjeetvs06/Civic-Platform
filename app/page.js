@@ -266,11 +266,11 @@ export default function HomePage() {
                         </span>
                       </div>
                       <p className="text-gray-700 mb-2">{issue.description}</p>
-                      <div className="flex flex-wrap gap-4 text-sm text-gray-500">
-                        <span>📍 {issue.location || "Location not set"}</span>
-                        <span>🏷️ {issue.category || "Uncategorized"}</span>
-                        <span>🏛️ {issue.taggedAuthority || "Not tagged"}</span>
-                        <span>📅 {formatDate(issue.createdAt)}</span>
+                      <div className="flex flex-wrap gap-4 text-sm font-semibold text-gray-700">
+                        <span>Location: {issue.location || "Location not set"}</span>
+                        <span>Category: {issue.category || "Uncategorized"}</span>
+                        <span>Authority: {issue.taggedAuthority || "Not tagged"}</span>
+                        <span>Date: {formatDate(issue.createdAt)}</span>
                       </div>
                     </div>
                     <div className="flex flex-col items-center gap-2 ml-4">
@@ -282,14 +282,14 @@ export default function HomePage() {
                             issue.upvotedBy || []
                           )
                         }
-                        className={`px-4 py-2 rounded-lg font-semibold ${
+                        className={`px-4 py-2 rounded-lg font-bold ${
                           issue.upvotedBy?.includes(user?.uid)
                             ? "bg-blue-600 text-white"
                             : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                         }`}
                         disabled={!user}
                       >
-                        👍 {issue.upvotes || 0}
+                        Upvote ({issue.upvotes || 0})
                       </button>
                     </div>
                   </div>

@@ -56,17 +56,17 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-xl p-8 w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center mb-2 text-gray-800">
+        <h1 className="text-4xl font-extrabold text-center mb-2 text-gray-800">
           CivicGrievance
         </h1>
-        <p className="text-center text-gray-600 mb-6">
+        <p className="text-center text-gray-700 mb-6 font-semibold">
           Public Issue Reporting Platform
         </p>
 
         <div className="flex gap-2 mb-6">
           <button
             onClick={() => setIsSignUp(false)}
-            className={`flex-1 py-2 rounded ${
+            className={`flex-1 py-2 rounded font-bold ${
               !isSignUp
                 ? "bg-blue-600 text-white"
                 : "bg-gray-200 text-gray-700"
@@ -76,7 +76,7 @@ export default function LoginPage() {
           </button>
           <button
             onClick={() => setIsSignUp(true)}
-            className={`flex-1 py-2 rounded ${
+            className={`flex-1 py-2 rounded font-bold ${
               isSignUp
                 ? "bg-blue-600 text-white"
                 : "bg-gray-200 text-gray-700"

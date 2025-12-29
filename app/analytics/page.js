@@ -240,20 +240,20 @@ Generate a report with:
       <div className="min-h-screen bg-gray-50 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-6">
-            <h1 className="text-3xl font-bold text-gray-900">
+            <h1 className="text-4xl font-extrabold text-gray-900">
               Policy Analytics Dashboard
             </h1>
             <div className="flex gap-3">
               <button
                 onClick={exportToCSV}
-                className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700"
+                className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 font-bold"
               >
                 Export CSV
               </button>
               <button
                 onClick={generateAIReport}
                 disabled={generating}
-                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+                className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 font-bold"
               >
                 {generating ? "Generating..." : "Generate AI Report"}
               </button>

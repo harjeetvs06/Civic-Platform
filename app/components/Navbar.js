@@ -57,7 +57,7 @@ export default function Navbar() {
           <div className="flex items-center gap-6">
             <button
               onClick={() => router.push("/")}
-              className="text-xl font-bold text-blue-600 hover:text-blue-700"
+              className="text-2xl font-extrabold text-blue-600 hover:text-blue-700"
             >
               CiviGrievence
             </button>
@@ -65,7 +65,7 @@ export default function Navbar() {
               <>
                 <button
                   onClick={() => router.push("/")}
-                  className={`px-3 py-2 rounded ${
+                  className={`px-3 py-2 rounded font-bold ${
                     pathname === "/"
                       ? "bg-blue-100 text-blue-700"
                       : "text-gray-700 hover:bg-gray-100"
@@ -75,7 +75,7 @@ export default function Navbar() {
                 </button>
                 <button
                   onClick={() => router.push("/post-issue")}
-                  className={`px-3 py-2 rounded ${
+                  className={`px-3 py-2 rounded font-bold ${
                     pathname === "/post-issue"
                       ? "bg-blue-100 text-blue-700"
                       : "text-gray-700 hover:bg-gray-100"
@@ -86,7 +86,7 @@ export default function Navbar() {
                 {userRole === "municipality" && (
                   <button
                     onClick={() => router.push("/municipality-dashboard")}
-                    className={`px-3 py-2 rounded ${
+                    className={`px-3 py-2 rounded font-bold ${
                       pathname === "/municipality-dashboard"
                         ? "bg-blue-100 text-blue-700"
                         : "text-gray-700 hover:bg-gray-100"
@@ -98,7 +98,7 @@ export default function Navbar() {
                 {userRole === "thinktank" && (
                   <button
                     onClick={() => router.push("/analytics")}
-                    className={`px-3 py-2 rounded ${
+                    className={`px-3 py-2 rounded font-bold ${
                       pathname === "/analytics"
                         ? "bg-blue-100 text-blue-700"
                         : "text-gray-700 hover:bg-gray-100"
@@ -113,18 +113,18 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             {user ? (
               <>
-                <span className="text-sm text-gray-600">
+                <span className="text-sm font-bold text-gray-700">
                   {userName} ({userRole})
                 </span>
                 <button
                   onClick={() => router.push("/profile")}
-                  className="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded"
+                  className="px-3 py-2 text-gray-700 hover:bg-gray-100 rounded font-bold"
                 >
                   Profile
                 </button>
                 <button
                   onClick={handleLogout}
-                  className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+                  className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 font-bold"
                 >
                   Logout
                 </button>
@@ -132,7 +132,7 @@ export default function Navbar() {
             ) : (
               <button
                 onClick={() => router.push("/login")}
-                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 font-bold"
               >
                 Login
               </button>

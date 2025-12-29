@@ -163,7 +163,7 @@ export default function MunicipalityDashboard() {
       <Navbar />
       <div className="min-h-screen bg-gray-50 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl font-extrabold text-gray-900 mb-6">
             Municipality Dashboard
           </h1>
 
@@ -211,11 +211,11 @@ export default function MunicipalityDashboard() {
                       </span>
                     </div>
                     <p className="text-gray-700 mb-2">{issue.description}</p>
-                    <div className="flex flex-wrap gap-4 text-sm text-gray-500">
-                      <span>📍 {issue.location}</span>
-                      <span>🏷️ {issue.category}</span>
-                      <span>👍 {issue.upvotes || 0} upvotes</span>
-                      <span>📅 {formatDate(issue.createdAt)}</span>
+                    <div className="flex flex-wrap gap-4 text-sm font-semibold text-gray-700">
+                      <span>Location: {issue.location}</span>
+                      <span>Category: {issue.category}</span>
+                      <span>Upvotes: {issue.upvotes || 0}</span>
+                      <span>Date: {formatDate(issue.createdAt)}</span>
                     </div>
                     {issue.mediaURLs && issue.mediaURLs.length > 0 && (
                       <div className="mt-3 grid grid-cols-3 gap-2">
