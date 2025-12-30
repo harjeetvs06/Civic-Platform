@@ -163,16 +163,17 @@ export default function HomePage() {
           </div>
 
           {/* Filters */}
-          <div className="bg-white p-4 rounded-lg shadow mb-6">
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg shadow-md mb-6 border-2 border-blue-200">
+            <h2 className="text-lg font-bold text-blue-900 mb-4">Filter & Sort Issues</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-base font-bold text-blue-900 mb-2">
                   Category
                 </label>
-                <select
+                <select 
                   value={filterCategory}
                   onChange={(e) => setFilterCategory(e.target.value)}
-                  className="w-full p-2 border rounded-lg"
+                  className="w-full p-3 border-2 border-blue-300 rounded-lg bg-white font-semibold text-gray-900 hover:border-blue-500 focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="all">All Categories</option>
                   <option value="roads">Roads</option>
@@ -185,13 +186,13 @@ export default function HomePage() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-base font-bold text-blue-900 mb-2">
                   Status
                 </label>
                 <select
                   value={filterStatus}
                   onChange={(e) => setFilterStatus(e.target.value)}
-                  className="w-full p-2 border rounded-lg"
+                  className="w-full p-3 border-2 border-blue-300 rounded-lg bg-white font-semibold text-gray-900 hover:border-blue-500 focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="all">All Status</option>
                   <option value="open">Open</option>
@@ -202,26 +203,26 @@ export default function HomePage() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Location
+                <label className="block text-base font-bold text-blue-900 mb-2">
+                   Location
                 </label>
                 <input
                   type="text"
                   placeholder="Search location..."
                   value={filterLocation}
                   onChange={(e) => setFilterLocation(e.target.value)}
-                  className="w-full p-2 border rounded-lg"
+                  className="w-full p-3 border-2 border-blue-300 rounded-lg bg-white font-semibold text-gray-900 placeholder-blue-500 hover:border-blue-500 focus:ring-2 focus:ring-blue-500"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Sort By
+                <label className="block text-base font-bold text-blue-900 mb-2">
+                   Sort By
                 </label>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full p-2 border rounded-lg"
+                  className="w-full p-3 border-2 border-blue-300 rounded-lg bg-white font-semibold text-gray-900 hover:border-blue-500 focus:ring-2 focus:ring-blue-500"
                 >
                   <option value="newest">Newest First</option>
                   <option value="trending">Most Upvoted</option>
@@ -231,7 +232,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Issues Feed */}
+
           <div className="space-y-4">
             {issues.length === 0 ? (
               <div className="bg-white p-8 rounded-lg shadow text-center text-gray-500">

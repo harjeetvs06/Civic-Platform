@@ -94,7 +94,7 @@ export default function LoginPage() {
             <input
               type="text"
               placeholder="Full Name"
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 border-2 border-blue-300 rounded-lg bg-white font-semibold text-gray-900 hover:border-blue-500 focus:ring-2 focus:ring-blue-500"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -103,7 +103,7 @@ export default function LoginPage() {
           <input
             type="email"
             placeholder="Email"
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 border-2 border-blue-300 rounded-lg bg-white font-semibold text-gray-900 hover:border-blue-500 focus:ring-2 focus:ring-blue-500"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -112,7 +112,7 @@ export default function LoginPage() {
           <input
             type="password"
             placeholder="Password"
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 border-2 border-blue-300 rounded-lg bg-white font-semibold text-gray-900 hover:border-blue-500 focus:ring-2 focus:ring-blue-500"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
@@ -122,7 +122,7 @@ export default function LoginPage() {
             <select
               value={role}
               onChange={(e) => setRole(e.target.value)}
-              className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full p-3 border-2 border-blue-300 rounded-lg bg-white font-semibold text-gray-900 hover:border-blue-500 focus:ring-2 focus:ring-blue-500"
             >
               <option value="citizen">Citizen</option>
               <option value="municipality">Municipality Authority</option>

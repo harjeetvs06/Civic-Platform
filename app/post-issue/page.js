@@ -75,7 +75,7 @@ export default function PostIssuePage() {
       setSelectedLocation({ lat, lng });
       markerRef.current.setPosition({ lat, lng });
       
-      // Reverse geocode
+
       const geocoder = new window.google.maps.Geocoder();
       geocoder.geocode({ location: { lat, lng } }, (results, status) => {
         if (status === "OK" && results[0]) {
@@ -84,7 +84,7 @@ export default function PostIssuePage() {
       });
     });
 
-    // Get user's current location
+
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
@@ -125,16 +125,20 @@ export default function PostIssuePage() {
     setSelectedFiles(selectedFiles.filter((_, i) => i !== index));
   }
 
-  async function uploadFiles() {
-    const urls = [];
-    for (const file of selectedFiles) {
-      const storageRef = ref(storage, `issues/${user.uid}/${Date.now()}_${file.name}`);
-      await uploadBytes(storageRef, file);
-      const url = await getDownloadURL(storageRef);
-      urls.push(url);
-    }
-    return urls;
-  }
+async function uploadFiles() {
+  const uploadPromises = selectedFiles.map(async (file) => {
+    const storageRef = ref(
+      storage,
+      `issues/${user.uid}/${Date.now()}_${file.name}`
+    );
+
+    await uploadBytes(storageRef, file);
+    return getDownloadURL(storageRef);
+  });
+
+  return Promise.all(uploadPromises);
+}
+
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -190,7 +194,7 @@ export default function PostIssuePage() {
       <Navbar />
       <div className="min-h-screen bg-gray-50 py-8">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-extrabold text-gray-900 mb-6">
+          <h1 className="text-3xl font-bold text-blue-900 mb-7">
             Report a Civic Issue
           </h1>
 
@@ -203,8 +207,9 @@ export default function PostIssuePage() {
                 type="text"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="e.g., Pothole on Main Street"
+                className="w-full p-3 border-2 border-blue-300 rounded-lg bg-white font-semibold text-gray-900 hover:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                
+                placeholder="title for the issue of topic"
                 required
               />
             </div>
@@ -217,7 +222,7 @@ export default function PostIssuePage() {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 rows={4}
-                className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full p-3 border-2 border-blue-300 rounded-lg bg-white font-semibold text-gray-900 hover:border-blue-500 focus:ring-2 focus:ring-blue-500"
                 placeholder="Describe the issue in detail..."
                 required
               />
@@ -231,8 +236,9 @@ export default function PostIssuePage() {
                 <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
-                  className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-3 border-2 border-blue-300 rounded-lg bg-white font-semibold text-gray-900 hover:border-blue-500 focus:ring-2 focus:ring-blue-500"
                 >
+        
                   <option value="roads">Roads</option>
                   <option value="water">Water Supply</option>
                   <option value="waste">Waste Management</option>
@@ -250,8 +256,9 @@ export default function PostIssuePage() {
                   type="text"
                   value={taggedAuthority}
                   onChange={(e) => setTaggedAuthority(e.target.value)}
-                  className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="e.g., Municipal Corporation of Delhi"
+                  className="w-full p-3 border-2 border-blue-300 rounded-lg bg-white font-semibold text-gray-900 hover:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                
+                  placeholder=" Municipal Corporation of Mangalore"
                 />
               </div>
             </div>
@@ -264,7 +271,8 @@ export default function PostIssuePage() {
                 type="text"
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
-                className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2"
+                className="w-full p-3 border-2 border-blue-300 rounded-lg bg-white font-semibold text-gray-900 hover:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                
                 placeholder="Enter address or click on map"
                 required
               />
@@ -291,7 +299,8 @@ export default function PostIssuePage() {
                 accept="image/*"
                 multiple
                 onChange={handleFileSelect}
-                className="w-full p-2 border rounded-lg"
+                className="w-full p-3 border-2 border-blue-300 rounded-lg bg-white font-semibold text-gray-900 hover:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                
               />
               {selectedFiles.length > 0 && (
                 <div className="mt-2 grid grid-cols-3 gap-2">
